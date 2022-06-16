@@ -7,7 +7,8 @@
   box-sizing: border-box;
 }
 
-:root {
+:root 
+{
   --body-bg-color: hsl(240, 5%, 7%);
   --text-color: hsl(240, 9%, 89%);
   --title-color: hsl(147, 96%, 42%);
@@ -15,4 +16,9 @@
   --bg-button-color: hsl(258, 73%, 62%);
 
   font-size: 62.5%; /* 1rem = 10px */
+}
+
+body
+{
+  font-size: 1.6rem;
 }
