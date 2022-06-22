@@ -21,4 +21,13 @@
 body
 {
   font-size: 1.6rem;
+  font-family: League Spartan;
+}
+
+h1{
+  font-family: Work Sans;
+}
+
+.email form{
+  font-family: Work Sans;
 }
