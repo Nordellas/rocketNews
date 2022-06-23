@@ -20,14 +20,34 @@
 
 body
 {
+  color: var(--text-color);
   font-size: 1.6rem;
   font-family: League Spartan;
+
+  background-color: var(--body-bg-color);
 }
 
 h1{
   font-family: Work Sans;
+  color: var(--title-color);
 }
 
-.email form{
+.mailbox{
   font-family: Work Sans;
+}
+
+/*IMG*/
+
+.logo{
+  width: 38.9rem;
+  height: 9.4rem;
+
+  margin-top: 5rem;
+  margin-left: 3rem;
+  margin-bottom: 10rem;
+}
+
+.oldguy{
+  width: 117.5rem;
+  height: 90rem;
 }
