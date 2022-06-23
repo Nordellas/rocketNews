@@ -27,11 +27,6 @@ body
   background-color: var(--body-bg-color);
 }
 
-h1{
-  font-family: Work Sans;
-  color: var(--title-color);
-}
-
 .mailbox{
   font-family: Work Sans;
 }
@@ -50,4 +45,25 @@ h1{
 .oldguy{
   width: 117.5rem;
   height: 90rem;
+}
+
+/*First Part*/
+
+.firstPart{
+  margin-left: 3.6rem;
+}
+
+.firstPart h1{
+  font-family: Work Sans;
+  font-weight: 700;
+
+  color: var(--title-color);
+}
+
+.firstPart p{
+  margin-top: .9rem;
+}
+
+.firstPart.bb p{
+  font-weight: 700;
 }
