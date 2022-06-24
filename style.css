@@ -25,15 +25,49 @@ body
   font-family: League Spartan;
 
   background-color: var(--body-bg-color);
+
+  height: 100vh;
+
+  display: grid;
+  grid-template-areas:  "1 2";
+  grid-template-columns: 1fr 1fr;
 }
 
-.mailbox{
+/*First Part*/
+
+.firstPart
+{
+  margin-left: 3.6rem;
+
+}
+
+.firstPart h1
+{
+  font-family: Work Sans;
+  font-weight: 700;
+
+  color: var(--title-color);
+}
+
+.firstPart p
+{
+  margin-top: .9rem;
+}
+
+.firstPart.bb p
+{
+  font-weight: 700;
+}
+
+.mailbox
+{
   font-family: Work Sans;
 }
 
 /*IMG*/
 
-.logo{
+.logo
+{
   width: 38.9rem;
   height: 9.4rem;
 
@@ -42,28 +76,20 @@ body
   margin-bottom: 10rem;
 }
 
-.oldguy{
+.oldguy
+{
   width: 117.5rem;
   height: 90rem;
 }
 
-/*First Part*/
+/*GRID*/
 
-.firstPart{
-  margin-left: 3.6rem;
+main .firstPart
+{
+  grid-area: 1;
 }
 
-.firstPart h1{
-  font-family: Work Sans;
-  font-weight: 700;
-
-  color: var(--title-color);
-}
-
-.firstPart p{
-  margin-top: .9rem;
-}
-
-.firstPart.bb p{
-  font-weight: 700;
+aside .fotoPart
+{
+  grid-area: 2;
 }
