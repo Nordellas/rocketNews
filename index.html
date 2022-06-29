@@ -17,34 +17,48 @@
 </head>
 <body>
   <section id="home">
-    <a href="#home"><img class="logo" src="/assets/logo.svg" alt="Logo da RocketNews mostrando uma ilustração de um personagem de pele roxa e roupa branca trazendo uma página de notícias"></a>
-
-    <main class="firstPart">
-      <div>
-        <h1>Atualize ideias e informações em 5 minutos.</h1>
-        <p class="bb"><b>Tudo que você precisa saber para começar seu dia bem e informado</b></p>
-        <p>Notícias sobre o universo Rocketseat e tudo o que precisa para começar o dia melhor.
-          Perfeito para se preparar para codar ☕</p>
+    <div id="background">
+      <div id="left-background"></div>
+      <div id="right-background">
+        <div id="background-image"></div>
       </div>
-  
-      <div>
-        <p>Insira seu e-mail:</p>
-        <form action="">
-          <input class="mailbox" type="email" placeholder="oi@rocketseat.com">
-          <button type="submit"><img src="/assets/send.svg" alt="botão"></button>
-        </form>
-      </div>
-  
-      <div>
-        <p>Deixe-me ler primeiro</p>
-        <button><img src="/assets/arrow-right.svg" alt="botão"></button>
-      </div>
-    </main>
-
-    <aside id="velho" class="fotoPart">
-      <img class="oldguy" src="/assets/read_news.jpg" alt="Imagem de um senhor sentado mexendo em um laptop enquanto possivelmente lê uma notícia">
-    </aside>
+    </div>
     
-  </section>
+    <header>
+      <div id="logo">
+        <img src="./assets/Logo.svg" alt="Logo RocketNews" />
+      </div>
+    </header>
+    
+    <main>
+      <section id="content">
+        <h1>atualize ideias e informações em 5 minutos.</h1> <br>
+        <p  id="subtitle" class="text">tudo que você precisa saber para começar seu dia bem informado</p>
+  
+        <p  id="description" class="text">notícias sobre o universo Rocketseat, e tudo o que precisa para começar o dia melhor.<br>
+                         perfeito para se preparar para codar &#x2615</p>
+      </section>
+  
+      <br>
+      
+      <section id="send-form">
+        <form action="submit" id="register-form">
+          <label id="lblInsertEmail" class="text">Insira seu e-mail:</label> <br>
+          <div id="greenbox" class="text shadow">
+            <input type="email" name="email" class="text" id="inputEmail"placeholder="  oi@rocketseat.com.br" data-min-length="3" data-required data-email-validate>
+            <button type="submit" class="button" id="buttonSend"></button>
+          </div>
+        </form>
+  
+        <br>
+  
+        <a href="https://app.rocketseat.com.br/discover/challenges/rocketnews" class="buttonArrow" target="_blank">
+          deixe-me ler primeiro          
+          
+          <p class="arrow"></p>
+        </a>
+  
+      </section>
+    </main>
 </body>
 </html>

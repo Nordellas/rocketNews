@@ -1,95 +1,170 @@
-/*GERAL*/
-
-* 
-{
+/*Zerando padrões de browsers*/
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
-:root 
-{
-  --body-bg-color: hsl(240, 5%, 7%);
-  --text-color: hsl(240, 9%, 89%);
-  --title-color: hsl(147, 96%, 42%);
-  --form-color: hsl(0, 0%, 66%);
-  --bg-button-color: hsl(258, 73%, 62%);
-
-  font-size: 62.5%; /* 1rem = 10px */
+/*Variáveis de cores*/
+:root {
+  --body-bg-color: #121214;
+  --body-bg-color-inverted: #E9E9E7;
+  --text-color: #e1e1e6;
+  --title-color: #04d361;
+  --form-color: #a8a8a8;
+  --bg-button-color: #8257e5;
+  --bg-button-color-inverted: #7DA81A;
 }
 
-body
-{
-  color: var(--text-color);
-  font-size: 1.6rem;
-  font-family: League Spartan;
+/*ID Background que define o preenchimento total da tela
+  assim como posicionamento absoluto e deve ser inline
+  para comportar os componentes do background.*/
+#background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-flex;
+}
 
-  background-color: var(--body-bg-color);
-
+/*Define a cor e dimensionamento da metade esquerda do bg.*/
+#left-background {
+  background: var(--body-bg-color);
+  width: 50%;
   height: 100vh;
-
-  display: grid;
-  grid-template-areas:  "1 2";
-  grid-template-columns: 1fr 1fr;
 }
 
-/*First Part*/
-
-.firstPart
-{
-  margin-left: 3.6rem;
-
+/*Define o tamanho do bg da metade direita.*/
+#right-background {
+  width: 50%;
+  height: 100vh;
 }
 
-.firstPart h1
-{
-  font-family: Work Sans;
+/*Define a imagem, que a mesma deve ocupar toda a div esquerda
+  assim como deve estar ao centro da div e deve ter o tamanho de cover.*/
+#background-image {
+  background: url(../assets/read_news.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Position absolute para ficar em cima do restante
+  top e left para margens do começo da logo.*/
+#logo img {
+  position: absolute;
+  top: 6vh;   /*height = altura*/
+  left: 2vw;  /*width  = largura*/
+  width: 23%;
+}
+
+/*Posicionar conteúdo acima do bg.*/
+main {
+  position: absolute;
+}
+
+/*para todos os textos colocar margem esquerda fixa.*/
+.text{
+  margin-left: 2vw;
+  font-family: Spartan;
+}
+
+/*Define que subtitulo deve ser em negrito.*/
+#subtitle {
   font-weight: 700;
+}
 
+/*distância entre linhas da descrição.*/
+#description {
+  line-height: 5vh;
+}
+
+/*Distância do conteúdo do topo.*/
+#content { 
+  margin-top: 30vh;
+}
+
+/*Define cor tamanho e fonte do título.*/
+h1 {
   color: var(--title-color);
+  font-family: Work Sans;
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-left: 2vw;
 }
 
-.firstPart p
-{
-  margin-top: .9rem;
+/*Define cor tamanho e fonte do subtítulo.*/
+p {
+  color: var(--text-color);
+  font-size: 1.08em;
+  font-weight: 500;
 }
 
-.firstPart.bb p
-{
+#send-form {
+  line-height: 7vh;
+}
+
+#lblInsertEmail {
+  color: var(--form-color);
+  font-size: 95%;
   font-weight: 700;
 }
 
-.mailbox
-{
+#greenbox {
+  position: absolute;
+  display: inline-block;
+  width: 50vw;
+  height: 50px;
+  background-color: var(--title-color);
+  box-shadow: 50px 5px 20px 5px var(--body-bg-color);
+}
+
+#inputEmail {
+  width: 52vw;
+  height: 50px;
+  position: absolute;
+  border: none;
+  margin-left: 12px;
+}
+
+#buttonSend {
+  width: 50px;
+  height: 50px;
+  left: 52vw;
+  position: relative;
+  border: none;
+  background: url(../assets/send.svg);
+  background-size: 44%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(100%);
+  background-color: var(--bg-button-color-inverted);
+  box-shadow: 5px 5px 20px var(--body-bg-color-inverted);
+}
+
+
+.buttonArrow {
+  color: var(--bg-button-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  align-items: center;
+  display: flex;
+  margin-top: 45px;
+  margin-left: 2vw;
   font-family: Work Sans;
+  width: 224px;
+  height: 20px;
 }
 
-/*IMG*/
-
-.logo
-{
-  width: 38.9rem;
-  height: 9.4rem;
-
-  margin-top: 5rem;
-  margin-left: 3rem;
-  margin-bottom: 10rem;
-}
-
-.oldguy
-{
-  width: 117.5rem;
-  height: 90rem;
-}
-
-/*GRID*/
-
-main .firstPart
-{
-  grid-area: 1;
-}
-
-aside .fotoPart
-{
-  grid-area: 2;
+.arrow {
+  margin-top: 3px;
+  margin-left: 25px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../assets/arrow-right.svg);
+  background-size: cover;
+  background-position: center;
+  stroke: var(--bg-button-color);
 }
